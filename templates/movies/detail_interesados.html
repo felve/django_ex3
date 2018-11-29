@@ -1,0 +1,18 @@
+<h2>{{ list.nombrecompleto }}</h2>
+<h4>Interesado: {{ list.owner.get_full_name }}</h4>
+
+<p>Detalle del insteresado:</p>
+<ul>
+ <p><b>Nombre del interesado :{{ list.nombrecompleto }}</b></p>
+ <p>Correo :{{ list.correo }}</p>
+ <p>Teléfono :{{ list.telefono}} </p>
+ <p>Región : {{ list.region.all.0 }}</p>
+ <p>Ciudad :{{ list.ciudad.all.0 }}</p>
+ <p>Vivienda :{{ list.vivienda.all.0}}</p>
+ <p>Fecha Nacimiento :{{ list.fecha_nacimiento}}</p>
+ 
+</ul>
+
+<a href="{% url 'movies:edit_interesados' list.pk %}">Editar</a>
+<a href="{% url 'movies:delete_interesados' list.pk %}">Borrar</a>
+<a href="{% url 'movies:interesados' %}">Volver</a>

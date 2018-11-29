@@ -1,0 +1,51 @@
+comandos que deben usarse para crear el proyecto
+
+django-admin startproyect cursotelmex
+pip install django
+python manage.py migrate
+python manage.py startapp moviles
+
+para crear las tablas en el modelo ´
+python manage.py makemigrations
+python manage.py migrate
+
+luego para crear el user del admin 
+python manage.py createsuperuser
+
+para correr el servidor
+python manage.py runserver
+
+
+user felipe	 pass Xelware09.,.,	(usuario admin)
+user carlos	 pass Xelware090909 (usuario normal)
+
+urls disponibles
+
+    ^login/$ [name='login']
+    ^admin/
+    ^ ^hello/$ [name='hello_world']
+    ^ ^crear-lista/$ [name='new_interesados']
+    ^ ^listas/$ [name='interesados']
+    ^ ^listas/(?P<id>\d+)/$ [name='detail_interesados']
+    ^ ^editar-lista/(?P<id>\d+)/$ [name='edit_interesados']
+    ^ ^borrar-lista/(?P<id>\d+)/$ [name='delete_interesados']
+    ^ ^mascotas/$ [name='listmascotas']
+    ^ ^crear-mascota/$ [name='new_mascotas']
+    ^ ^listas_mascotas/$ [name='mascotas']
+    ^ ^listas_mascotas/(?P<id>\d+)/$ [name='detail_mascotas']
+    ^ ^editar-mascotas/(?P<id>\d+)/$ [name='edit_mascotas']
+    ^ ^borrar-mascota/(?P<id>\d+)/$ [name='delete_mascotas']
+    ^ ^estados/$ [name='listestados']
+    ^ ^crear-estados/$ [name='new_estados']
+    ^ ^listas_estados/$ [name='estados']
+    ^ ^listas_estados/(?P<id>\d+)/$ [name='detail_estados']
+    ^ ^editar-estados/(?P<id>\d+)/$ [name='edit_estados']
+    ^ ^borrar-estados/(?P<id>\d+)/$ [name='delete_estados']
+
+	
+	
+	pip install django-registration==2.4.1
+	pip install django-allauth
+	pip install social-auth-app-django
+	pip install python-social-auth 
+	pip install django-progressive-web-app

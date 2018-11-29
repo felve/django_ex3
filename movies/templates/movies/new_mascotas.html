@@ -1,0 +1,14 @@
+<h2>Mascotas</h2>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Enviar">
+</form>
+
+{% if list %}
+  <a href="{% url 'movies:detail_mascotas' list.pk %}">Cancelar</a>
+{% else %}
+  <a href="{% url 'movies:mascotas' %}">Cancelar</a>
+{% endif %}
+

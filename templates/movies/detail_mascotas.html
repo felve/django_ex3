@@ -1,0 +1,16 @@
+<h2>{{ list.nombre }}</h2>
+<h4>Interesado: {{ list.owner.get_full_name }}</h4>
+
+<p>Detalle del insteresado:</p>
+<ul>
+ <p><b>Nombre Mascota :{{ list.nombre }}</b></p>
+ <p>Raza predominante :{{ list.razap.all.0 }}</p>
+ <p>descripcion :{{ list.descripcion}} </p>
+ <p>Estados : {{ list.estados.all.0 }}</p>
+ <p>Image :{{ list.image }}</p>
+ 
+</ul>
+
+<a href="{% url 'movies:edit_mascotas' list.pk %}">Editar</a>
+<a href="{% url 'movies:delete_mascotas' list.pk %}">Borrar</a>
+<a href="{% url 'movies:mascotas' %}">Volver</a>

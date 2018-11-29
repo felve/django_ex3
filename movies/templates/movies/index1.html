@@ -1,0 +1,17 @@
+{% extends 'movies/base.html' %}
+{% block content %}
+{% load static %}
+<br><br><br>
+<div class="feeds">
+	{% for result in results %}
+		<h3>{{result.rut}}</h3>
+		<br>
+		Name:{{result.nombrecompleto}}
+		<br>
+		<p id="{{result.id}}">
+			{{result.telefono}}
+		</p>
+		<hr>
+	{% endfor %}
+</div>
+{% endblock %}

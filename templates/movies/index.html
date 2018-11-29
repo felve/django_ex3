@@ -1,0 +1,32 @@
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sistema de Mascotas</title>
+</head>
+<body>
+<link rel="stylesheet" type="{% static "css/stilo.css"%}">
+{% block title %}Login{% endblock %}
+
+{% block content %}
+{{ csrf_token }}
+  <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+{% endblock %}
+<table>
+<p>  </p>
+{% load socialaccount %}
+<p></p><a class="btn btn-primary btn-block" href="{% provider_login_url "facebook" method="oauth2" %}">
+   <span class="fab fa-facebook"></span>
+      LOGIN CON FACEBOOK
+ </a>
+</p>
+</table>
+</body>
+</html>
+

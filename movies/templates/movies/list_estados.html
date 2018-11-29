@@ -1,0 +1,11 @@
+<h2>Lista de los Estados disponibles</h2>
+
+<ul>
+  {% for list in lists %}
+    <li><a href="{% url 'movies:detail_estados' list.pk %}">{{ list }}</a></li>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'movies:new_estados' %}">Crear nuevo Estado</a>
+<p><a href="{% url 'movies:mascotas' %}">Listar Mascotas</a></p>
+<p><a href="{% url 'movies:interesados' %}">Listar Interesados</a></p>

@@ -1,0 +1,14 @@
+<h2>Ficha para ingreso de interesados en adoptar.</h2>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Enviar">
+</form>
+
+{% if list %}
+  <a href="{% url 'movies:detail_interesados' list.pk %}">Cancelar</a>
+{% else %}
+  <a href="{% url 'movies:interesados' %}">Cancelar</a>
+{% endif %}
+

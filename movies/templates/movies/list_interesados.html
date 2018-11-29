@@ -1,0 +1,9 @@
+<h2>Lista de Interesados.</h2>
+
+<ul>
+  {% for list in lists %}
+    <li><a href="{% url 'movies:detail_interesados' list.pk %}">{{ list }}</a></li>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'movies:new_interesados' %}">Crear un nuevo interesado</a>

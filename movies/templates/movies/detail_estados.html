@@ -1,0 +1,14 @@
+<h2>{{ list.estados.all.0}}</h2>
+
+
+<p>Mascotas:</p>
+<ul>
+  {% for mascotas in list.estados.all %}
+    <li>{{ list.nombre }}</li>
+	<li>{{ list.image }}</li>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'movies:edit_estados' list.pk %}">Editar</a>
+<a href="{% url 'movies:delete_estados' list.pk %}">Borrar</a>
+<a href="{% url 'movies:estados' %}">Volver</a>

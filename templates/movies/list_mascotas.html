@@ -1,0 +1,10 @@
+<h2>Listado de Mascotas</h2>
+<div>
+<ul>
+  {% for list in lists %}
+    <li><a href="{% url 'movies:detail_mascotas' list.pk %}">{{ list }}</a></li>
+  {% endfor %}
+</ul>
+
+<a href="{% url 'movies:new_mascotas' %}">Crear una nueva mascota</a>
+</div>
